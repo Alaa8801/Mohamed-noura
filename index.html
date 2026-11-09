@@ -210,7 +210,7 @@
           <p class="font-ruqaa text-2xl text-gold-700 font-bold">محمد & نورا</p>
           <div class="w-16 h-[1.5px] bg-gold-400 my-2"></div>
           <p class="font-cairo font-bold text-xs text-softBronze">الجمعة 14 نوفمبر 2026 م</p>
-          <p class="font-cairo text-[11px] text-lightBronze mt-0.5">الساعة 6:00 مساءً</p>
+          <p class="font-cairo text-[11px] text-lightBronze mt-0.5">الساعة 5:00 مساءً</p>
         </div>
 
         <!-- طيات المظروف الجانبية والسفلية: باللون الذهبي الملكي بالكامل مع ظلال وفواصل مذهبة -->
@@ -379,7 +379,7 @@
 
           <div class="inline-block px-5 py-1.5 rounded-full bg-white border border-gold-300 text-gold-800 font-cairo text-sm font-bold shadow-sm">
             <i class="fa-regular fa-clock text-xs ml-1 text-gold-600"></i>
-            الساعة 6:00 مساءً
+            الساعة 5:00 مساءً
           </div>
         </div>
 
@@ -576,9 +576,9 @@
     });
 
     // ----------------------------------------------------
-    // 2. المؤقت التنازلي المباشر (الجمعة 14 نوفمبر 2026 الساعة 6 مساءً)
+    // 2. المؤقت التنازلي المباشر (الجمعة 14 نوفمبر 2026 الساعة 5 مساءً)
     // ----------------------------------------------------
-    const targetDateObj = new Date(2026, 10, 14, 18, 0, 0); // شهر نوفمبر = 10 (يبدأ العد من 0)
+    const targetDateObj = new Date(2026, 10, 14, 17, 0, 0); // شهر نوفمبر = 10، الساعة 17:00 (5 مساءً)
     const targetDate = targetDateObj.getTime();
 
     const daysEl = document.getElementById('days');
@@ -613,7 +613,7 @@
     updateCountdown();
 
     // ----------------------------------------------------
-    // 3. إضافة الموعد لتقويم Google Calendar بلمسة واحدة
+    // 3. إضافة الموعد لتقويم Google Calendar بلمسة واحدة (الساعة 5 مساءً)
     // ----------------------------------------------------
     const addToCalendarBtn = document.getElementById('addToCalendarBtn');
     const toastMessage = document.getElementById('toastMessage');
@@ -630,10 +630,10 @@
 
     addToCalendarBtn.addEventListener('click', () => {
       const title = encodeURIComponent('حفل زفاف محمد & نورا');
-      const details = encodeURIComponent('نتشرف بدعوتكم لحضور حفل زفاف محمد & نورا في مقهى العريشه بالربوة - الجمعة 14 نوفمبر 2026 م الساعة 6:00 مساءً');
+      const details = encodeURIComponent('نتشرف بدعوتكم لحضور حفل زفاف محمد & نورا في مقهى العريشه بالربوة - الجمعة 14 نوفمبر 2026 م الساعة 5:00 مساءً');
       const location = encodeURIComponent('مقهى العريشه بالربوة');
-      // 2026-11-14 18:00:00 to 22:00:00
-      const dates = '20261114T180000/20261114T220000';
+      // 2026-11-14 17:00:00 to 21:00:00
+      const dates = '20261114T170000/20261114T210000';
       const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
 
       window.open(googleCalendarUrl, '_blank');
@@ -718,6 +718,10 @@
     }
 
     const petals = Array.from({ length: 28 }, () => new SilkPetal());
+
+    class SilkPetalBurst {
+      constructor() {}
+    }
 
     function triggerPetalBurst() {
       for (let i = 0; i < 25; i++) {
