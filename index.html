@@ -209,7 +209,7 @@
         <div id="previewCard" class="absolute inset-x-4 top-4 bottom-4 bg-white rounded-xl border border-gold-300/70 shadow-sm flex flex-col items-center justify-center p-4 text-center z-10 invitation-inner-card pointer-events-none">
           <p class="font-ruqaa text-2xl text-gold-700 font-bold">محمد & نورا</p>
           <div class="w-16 h-[1.5px] bg-gold-400 my-2"></div>
-          <p class="font-cairo font-bold text-xs text-softBronze">الإثنين 2 نوفمبر 2026 م</p>
+          <p class="font-cairo font-bold text-xs text-softBronze">الجمعة 14 نوفمبر 2026 م</p>
           <p class="font-cairo text-[11px] text-lightBronze mt-0.5">الساعة 6:00 مساءً</p>
         </div>
 
@@ -374,7 +374,7 @@
           </div>
           
           <div class="text-xl sm:text-2xl md:text-3xl font-ruqaa text-slateBronze font-bold">
-            الإثنين 2 نوفمبر 2026 م
+            الجمعة 14 نوفمبر 2026 م
           </div>
 
           <div class="inline-block px-5 py-1.5 rounded-full bg-white border border-gold-300 text-gold-800 font-cairo text-sm font-bold shadow-sm">
@@ -422,13 +422,13 @@
             </span>
             <span class="text-xs font-cairo font-bold text-gold-800">موقع الحفل</span>
             <h3 class="text-2xl sm:text-3xl font-bold font-ruqaa text-slateBronze mt-0.5">
-              قرية الياسطي
+              مقهى العريشه بالربوة[span_0](start_span)[span_0](end_span)
             </h3>
           </div>
 
           <!-- زر الخريطة النابض والمضيء -->
           <a 
-            href="https://maps.app.goo.gl/WQnP8Job8myajjvy9" 
+            href="https://maps.app.goo.gl/U1BLSCjcSZUdKvLF6?g_st=awb" 
             target="_blank" 
             rel="noopener noreferrer"
             class="relative inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 w-full rounded-2xl bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 text-white font-cairo font-extrabold text-base sm:text-lg shadow-xl animate-gold-radiance sheen-layer overflow-hidden transition-all duration-300 active:scale-95 hover:brightness-105"
@@ -474,7 +474,7 @@
           <p id="rsvpStatusText" class="text-[12px] font-cairo font-bold text-gold-700 hidden"></p>
         </div>
 
-        <!-- صندوق قبلة من العروسين للأطفال (مطابق للصورة المرفقة الثانية بنفس الأسلوب الاحترافي) -->
+        <!-- صندوق قبلة من العروسين للأطفال -->
         <div class="relative w-full max-w-md mx-auto p-4 sm:p-5 rounded-2xl bg-white/95 border border-gold-300/80 shadow-[0_4px_20px_rgba(212,175,55,0.08)] flex items-center justify-between gap-4">
           <span class="font-cairo text-sm sm:text-base font-bold text-slateBronze text-right flex-1 leading-relaxed">
             قبلة من العروسين لأطفالكم قبل النوم
@@ -576,9 +576,9 @@
     });
 
     // ----------------------------------------------------
-    // 2. المؤقت التنازلي المباشر (الإثنين 2 نوفمبر 2026 الساعة 6 مساءً)
+    // 2. المؤقت التنازلي المباشر (الجمعة 14 نوفمبر 2026 الساعة 6 مساءً)
     // ----------------------------------------------------
-    const targetDateObj = new Date(2026, 10, 2, 18, 0, 0); // شهر نوفمبر = 10
+    const targetDateObj = new Date(2026, 10, 14, 18, 0, 0); // شهر نوفمبر = 10 (يبدأ العد من 0)
     const targetDate = targetDateObj.getTime();
 
     const daysEl = document.getElementById('days');
@@ -630,10 +630,10 @@
 
     addToCalendarBtn.addEventListener('click', () => {
       const title = encodeURIComponent('حفل زفاف محمد & نورا');
-      const details = encodeURIComponent('نتشرف بدعوتكم لحضور حفل زفاف محمد & نورا في قرية الياسطي - الإثنين 2 نوفمبر 2026 م الساعة 6:00 مساءً');
-      const location = encodeURIComponent('قرية الياسطي');
-      // 2026-11-02 18:00:00 to 22:00:00
-      const dates = '20261102T180000/20261102T220000';
+      const details = encodeURIComponent('نتشرف بدعوتكم لحضور حفل زفاف محمد & نورا في مقهى العريشه بالربوة - الجمعة 14 نوفمبر 2026 م الساعة 6:00 مساءً');
+      const location = encodeURIComponent('مقهى العريشه بالربوة');
+      // 2026-11-14 18:00:00 to 22:00:00
+      const dates = '20261114T180000/20261114T220000';
       const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
 
       window.open(googleCalendarUrl, '_blank');
